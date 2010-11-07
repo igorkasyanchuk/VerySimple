@@ -1,0 +1,23 @@
+<h1>Listing text_boxes</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @text_boxes.each do |text_box| %>
+  <tr>
+    <td><%= text_box.data %></td>
+    <td><%= link_to 'Show', text_box %></td>
+    <td><%= link_to 'Edit', edit_text_box_path(text_box) %></td>
+    <td><%= link_to 'Destroy', text_box, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Text box', new_text_box_path %>
